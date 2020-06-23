@@ -1,2 +1,21 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<text class="title">分类页面</text>
+<!-- 获取用户信息的另一种方式 -->
+<button 
+  size="mini" 
+  open-type="getUserInfo" 
+  bindgetuserinfo="handleUserInfo">
+  获取用户信息的按钮
+  </button>
+
+  微信用户名{{name}}
+  <!-- 第三种获取用户信息的方法,但是仅仅只做一个展示-->
+  <open-data type= "userNickName"></open-data>
+  <open-data type = "userAvatarUrl"></open-data>
+  <text>全局定义的名字{{age}}</text>
+  <text>
+    daddddddddddddddddddddddddd
+    ttttttttttttttttttttttttt
+    ffffffffffffffffffffffff
+    eeeeeeeeeeeeeeeeeeee
+  </text>

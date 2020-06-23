@@ -1,66 +1,27 @@
-// pages/about/about.js
+// 获取全局定义的数据
+const app = getApp()
+const asic = app.globalData.asic
+// 注册一个页面
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    name: "",
+    age:asic
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleUserInfo(event) {
+    console.log(event.detail.userInfo.nickName),
+    this.setData({
+      name: event.detail.userInfo.nickName
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 监听页面的滚动
+  onPageScroll(obj) {
+    console.log(obj)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 监听页面滚动到底部
+  onReachBottom() {
+    console.log("页面滚动到了底部")
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPullDownRefresh() {
+    console.log("页面下拉刷新")
   }
 })

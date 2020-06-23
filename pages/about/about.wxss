@@ -1,1 +1,5 @@
 /* pages/about/about.wxss */
+.title {
+  color: red;
+  size: 22px;
+}

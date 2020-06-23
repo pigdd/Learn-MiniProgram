@@ -1,3 +1,10 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello wechat</text>
-<button size="mini">按钮</button>
+<!-- 1、小程序的数据绑定:通过mustache语法{{}} -->
+<!-- view组件相当于一个视图组件 -->
+<view>hello {{name}}</view>
+<!-- 2、列表渲染：wx:for -->
+<view wx:for = "{{students}}">{{index}}: {{item.name}}</view>
+<!-- 3、事件监听 -->
+<view>事件监听{{conuter}}</view>
+<button size="mini" bindtap="btnClick">+</button>
+<button size="mini" bindtap="btnreduce">-</button>
