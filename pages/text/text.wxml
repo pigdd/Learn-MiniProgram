@@ -1,0 +1,16 @@
+<!--pages/text/text.wxml-->
+<!-- input组件 默认透明且没有边框-->
+<!-- value默认值 -->
+<input value="请输入内容"></input>
+<!-- type用于决定键盘的类型，在手机端会显示 -->
+<input type="number"></input>
+<!-- 输入的暗文的形式 -->
+<input password="true" placeholder="请输入密码"/>
+<!-- 设置右下角按钮的文字,仅在type为text的情况下有用 -->
+<input confirm-type = "search" type="text"></input>
+<!-- input绑定事件 -->
+<input bindinput="handleinput"/>
+<text>用户输入的内容是：{{message}}\n</text>
+<!-- hide属性 -->
+<button size="mini" bindtap="try">标签的隐藏与显示</button>
+<text hidden="{{flag}}" >标签属性</text>

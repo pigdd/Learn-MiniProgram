@@ -1,3 +1,67 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello wechat</text>
-<button size="mini">按钮</button>
+<text>内置组件</text>
+<!-- 图片组件 -->
+<cover-image src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg" class="imgs"></cover-image>
+<!-- 滚动区域，要设置属性 -->
+<scroll-view scroll-y="true">
+生日快乐！
+生日快乐！
+生日快乐！
+生日快乐！
+生日快乐！
+生日快乐！
+生日快乐！
+生日快乐！
+</scroll-view>
+<!-- 缩放，movable-view必须是movable-area的子函数 -->
+<view class="move">
+  <movable-area scale-area = "true">
+    <movable-view direction = "all" htouchmove = "touchx" scale-value = "2" scale = "true">
+    <cover-image src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg" class="imgs"></cover-image>
+    </movable-view>
+  </movable-area>
+</view>
+<!-- 滑块视图容器swiper（轮播图） --><view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}">{{textArray[index]}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">指示点</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{indicatorDots}}" bindchange="changeIndicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeAutoplay" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider bindchange="durationChange" value="{{duration}}" min="500" max="2000"/>
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider bindchange="intervalChange" value="{{interval}}" min="2000" max="10000"/>
+    </view>
+  </view>
+</view>
+

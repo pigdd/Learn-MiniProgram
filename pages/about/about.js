@@ -5,62 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    status:true,
+    hobbies: ["篮球", "游泳", "唱歌", "跳舞"],
+    url:[],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleclear(event) {
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  buttonClick() {
+    // 微信小程序的弹出框
+    wx.showModal({
+      title: '点击按钮',
+      content: '这是一个弹窗',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handlechooseAldum() {
+    wx.chooseImage({
+      success: (res) => {
+        console.log(res);
+        const path = res.tempFilePaths[0]
+        this.setData({
+          url : path
+        })
+      },
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  imageload() {
+    console.log("图片开始加载了")
   }
 })

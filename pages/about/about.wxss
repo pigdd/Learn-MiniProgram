@@ -1,1 +1,21 @@
 /* pages/about/about.wxss */
+view:nth-of-type(3) text:nth-of-type(4){
+  font-size: 18px;
+}
+.style_class {
+  background-color: blue;
+  color:orange;
+}
+.viewStyle{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  color:black;
+  background-color: rgba(247, 94, 18, 0.5);
+  text-align: center;
+  line-height: 100px;
+}
+image:nth-of-type(2) {
+  width: 120px;
+  height: 120px;
+}

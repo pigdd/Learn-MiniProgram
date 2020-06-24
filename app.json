@@ -1,6 +1,32 @@
 {
   "pages": [
+    "pages/text/text",
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "组件1",
+        "iconPath": "assets/img/component.png",
+        "selectedIconPath": "assets/img/component_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "组件2",
+        "iconPath": "assets/img/component.png",
+        "selectedIconPath": "assets/img/component_active.png"
+      },
+        {
+          "pagePath": "pages/text/text",
+          "text": "组件3",
+          "iconPath": "assets/img/component.png",
+          "selectedIconPath": "assets/img/component_active.png"
+        }
+    ]
+  },
+  "sitemapLocation": "sitemap57.json"
 }

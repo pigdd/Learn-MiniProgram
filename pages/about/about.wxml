@@ -1,2 +1,70 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<!-- 内置组件 -->
+<!-- icon组件：图标组件 -->
+<!-- text组件：显示文本，相当于span，是行内元素， -->
+<view>
+<!-- 利用转义字符“\n”可以达到换行的效果 -->
+  <text>图标组件\n</text>
+  <icon type="success" size="50"></icon>
+  <icon type="success_no_circle" size="50"></icon>
+  <icon type="info" size="50"></icon>
+  <icon type="warn" size="50"></icon>
+  <icon type="wating" size="50"></icon>
+  <icon type="cancel" size="50"></icon>
+  <icon type="download" size="50"></icon>
+  <icon type="search" size="50"></icon>
+  <icon type="clear" size="50"></icon>
+</view>
+<!-- 进度条组件 -->
+<view>
+  <progress show-info="true" active="true" percent="20"></progress>
+  <icon type="clear" size="50" bindtap="handleclear"></icon>
+</view>
+<!-- text组件：text中只能嵌套text -->
+<!-- selectable: 默认false，长按可以选中
+      space:空格
+      decode：是否解码
+-->
+<view>
+  <text selectable="true">text组件\n</text>
+  <text space="ensp">空 格\n</text>
+  <text space="emsp">空 格\n</text>
+  <text space="nbsp">空 格\n</text>
+  <text decode>5 &gt; 3</text>
+</view>
+<!-- button按钮组件 -->
+<view>
+  <button size="mini" type="warn">警告按钮</button>
+  <button size="mini" plain="true" disabled="true">镂空按钮</button>
+  <button size="mini" loading="true" disabled="true">加载按钮</button>
+  <button size="mini" hover-class="style_class" bindtap="buttonClick">点击按钮</button>
+</view>
+<!-- 多选组件checkbox -->
+<view>
+  <text>默认样式</text>
+  <checkbox checked="true">选中</checkbox>
+  <checkbox checked="false">未选中</checkbox>
+  <view wx:for = "{{hobbies}}">
+    <text>你的爱好是：</text>
+    <checkbox>{{item}}</checkbox>
+  </view>
+</view>
+<!-- view组件：相当于一个容器，是块级元素，相当于div -->
+<!--hover-stay-time点击的状态停留的时间 -->
+<view hover-class="viewStyle" hover-stay-time="10000">view组件</view>
+<!-- 图片组件image：可以写成单标签
+    image组件默认有自己的大小；320 * 240
+    行内块元素
+ -->
+ <!-- 缩放模式：图片没办法填充的时候 ，进行缩放 -->
+<image src="../../assets/img/component.png"   
+       show-menu-by-longpress
+></image>
+<image src="/assets/img/person.jpeg"/>
+<button bindtap="handlechooseAldum">选择图片</button>
+<image src="{{url}}"/>
+<view>===============图片懒加载======================</view>
+<image wx:for = "{{10}}"
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       lazy-load
+       bindload="imageload"/>
