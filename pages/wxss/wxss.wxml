@@ -1,0 +1,22 @@
+<!--pages/wxss/wxss.wxml-->
+
+<text>微信中的wxss</text>
+<!-- 设置样式的3种方法 -->
+<!-- 1.1设置行内样式：以键值对的方式设置 -->
+<view style="color:red; font-size: 20px">酋长啊！第一种</view>
+<!-- 1.2第二种，根据选择器设置,页内样式 -->
+<view class="viewStyle">酋长啊！第一种</view>
+<!-- 1.3第三种，在全局中设置样式 -->
+<view class="container">酋长啊！第一种</view>
+<!-- 三种方式的优先级：行内样式 > 页内样式 > 全局样式 -->
+
+<!-- 尺寸单位 -->
+<view>===============单位的扩展rpx=================</view>
+<!-- rpx会自适应屏幕的尺寸，1rpx = 0.5px是px的一半 -->
+<view class="unit">哈哈哈</view>
+<view class="com">呵呵呵</view>
+
+<view>=====外部样式的导入=====</view>
+<!-- 在wxss页面中利用import进行样式导入 -->
+
+<!-- 使用官方样式库WE-UI -->

@@ -1,0 +1,10 @@
+var movie = "海贼王";
+function format (price, number) {
+  number = number || 2
+  return price.toFixed(number)
+}
+
+module.exports = {
+  movie : movie,
+  format : format
+}

@@ -1,0 +1,62 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- wxml的一些语法及注意事项 -->
+<!-- mustache语法 -->
+<view>获取当前的时间{{time}}</view>
+<button bindtap="handleFontColor" size="mini">改变字体颜色</button>
+<view class="{{isAcive ? 'active' : ''}}">字体颜色</view>
+
+<!-- wx:if wx:elif wx:for的用法 -->
+<button bindtap="handleShow" size="mini">切换显示</button>
+<view wx:if = "{{isShow}}">if条件判断</view>
+<view>=====wx:elif条件判断=====</view>
+<view wx:if = "{{score >= 90}}">优秀</view>
+<view wx:elif = "{{score >= 80}}">良好</view>
+<view wx:elif = "{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性，必须使用mustache语法-->
+<!-- hidden隐藏，相当于添加一个属性display:none（visibility：hidden占据的空间不消失）,该元素还是存在的，占据的空间消失 -->
+<!-- if控制组件的显示和隐藏的时候，不显示的话组件不会被渲染，页面的组件不存在 -->
+<view hidden="{{true}}">hidden属性</view>
+<view wx:if = "{{true}}">if控制显示和隐藏</view>
+
+<!-- 列表渲染 -->
+<view wx:for = "{{scores}}" wx:key = "scores">
+  <text>{{item}} ：</text> 
+  <text wx:if = "{{item >= 90}}">优秀</text>
+  <text wx:elif = "{{item >= 80}}">良好</text>
+  <text wx:elif = "{{item >= 60}}">及格</text>
+  <text wx:else>不及格</text>
+</view>
+<button size="mini" bindtap="handlescore">平均成绩是：{{sco}}</button>
+
+<!-- block标签，如果有嵌套循环可以用block标签 -->
+<block>
+  <view>block不会进行渲染，只是一个嵌套标签</view>
+</block>
+<!-- wx:for修改item和index的名字 -->
+<block wx:for = "{{'b站11周年'}}" wx:for-item = "number" wx:for-index = "search" wx:key = "bili">
+  {{number}}的索引是{{search}},
+</block>
+<!-- key的作用是在dom渲染的时候可以提高性能 -->
+<!-- template模板：提高代码的复用性 -->
+<view>===========template模板</view>
+<template name="templateItem">
+  <text>{{content}}\n</text>
+  <button size="mini">{{btn}}
+  <navigator target = "https://www.bilibili.com/"></navigator>
+  </button>
+</template>
+
+<!-- 调用template模板 -->
+<template is="templateItem" data="{{content: '哔哩哔哩' , btn : '11周年'}}"></template>
+<!-- 模板的导入 -->
+
+<import src = "/wxmlDemo/template.wxml"/>
+<template is="demo" data="{{btncontent : '警告'}}"></template>
+<template is="demo" data="{{btncontent : '提交'}}"></template>
+<template is="demo" data="{{btncontent : '调试'}}"></template>
+<!-- wxml的导入
+    1、import的导入，导入template，但是不能嵌套导入
+    2、include的导入，将公共的wxml进行导入，不能导入template/wxss，
+ -->
