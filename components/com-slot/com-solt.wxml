@@ -1,0 +1,8 @@
+<!--components/com-slot/com-solt.wxml-->
+<!-- 组件化的插槽的使用 -->
+<view>
+  <text>我是组件的头部\n</text>
+  <slot/>
+   <text>我是组件的尾部\n</text>
+</view>
+

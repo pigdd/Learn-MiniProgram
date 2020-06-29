@@ -1,0 +1,7 @@
+/* components/my-com/com.wxss */
+.title {
+  font-size: 64rpx;
+}
+.btn {
+  border-color: burlywood;
+}

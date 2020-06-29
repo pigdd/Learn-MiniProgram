@@ -1,0 +1,20 @@
+/* components/com-train/com-train.wxss */
+.tab {
+  display: flex;
+  /* background-color: blanchedalmond; */
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.item {
+  flex: 1;
+  text-align: center;
+}
+.active {
+  color : rgb(238, 49, 137);
+  font-size: 36rpx;
+}
+
+.active text{
+  padding: 20rpx 10rpx;
+  border-bottom: 6rpx solid rgb(238, 49, 137);
+}

@@ -1,0 +1,2 @@
+<!--components/com-event/com-event.wxml-->
+<button size="mini" bind:tap = "handlecomevent">+1</button>

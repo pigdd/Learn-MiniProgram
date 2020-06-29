@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "com" : "/components/com-train/com-train",
+    "com-sel" : "/components/com-sel/com-sel",
+    "com-slot" : "/components/com-slot/com-solt",
+    "com-mslot" : "/components/com-slots/com-slots"
+  }
+}

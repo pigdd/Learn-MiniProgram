@@ -1,0 +1,26 @@
+<!--pages/tabbar/tabbar.wxml-->
+<!-- 自定义组件练习 -->
+<view>======自定义组件练习======</view>
+<view class="tabbar">
+  <com litters = "{{litters}}" bind:handleClick = "showClick"/>
+</view>
+<view class="sty">修改组件内的数据</view>
+<com-sel bind:update = "handleUpdate" id = "sel-com"/>
+<!-- 插槽的使用 -->
+<!-- 单个插槽的使用 -->
+<com-slot>
+  <button>插槽的自定义按钮</button>
+</com-slot>
+<com-slot>
+  <slider value="60" ></slider>
+</com-slot>
+
+<!-- 多个插槽的使用
+    1、必须给每一个插槽添加name属性
+    2、在组件的js中options：multipleSlots属性为true
+ -->
+ <com-mslot>
+    <slider slot = "slot3"></slider>
+    <text slot = "slot1">我是第一个插槽的文件\n</text>
+    <text slot = "slot2">我是第二个插槽的文件\n</text>
+ </com-mslot>

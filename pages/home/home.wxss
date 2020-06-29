@@ -1,0 +1,11 @@
+/* pages/home/home.wxss */
+.title {
+  color : blue;
+}
+.red {
+  color : green
+}
+
+.blue {
+  color : orange;
+}

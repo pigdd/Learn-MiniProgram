@@ -1,0 +1,17 @@
+<!--pages/home/home.wxml-->
+<text class="title">自定义组件</text>
+<!-- 1、自定义组件的基本使用 -->
+<my-com/>
+<my-com/>
+<my-com/>
+<style-com/>
+<style-com/>
+<style-com/>
+
+<view>=====组件和页面传值=====</view>
+<com-prop title = "第一" content = "aiya" titleclass = "red"/>
+<com-prop title = "第二" content = "ouyou" titleclass = "blue"/>
+<com-prop/>
+<!-- 组件传递参数 -->
+<view>当前显示的数据是：{{counter}}</view>
+<com-event bind:increate = "handleincremate"/>

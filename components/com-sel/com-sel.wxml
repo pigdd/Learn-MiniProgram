@@ -1,0 +1,4 @@
+<!--components/com-sel/com-sel.wxml-->
+<!-- 修改组件内的数据 -->
+<view>当前数字是：{{counter}}</view>
+<button size="mini" bind:tap = "handleUpdate">修改组件的数据</button>

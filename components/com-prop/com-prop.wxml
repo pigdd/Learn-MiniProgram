@@ -1,0 +1,3 @@
+<!--components/com-prop/com-prop.wxml-->
+<view class="titleclass">{{title}}</view>
+<button size="mini">{{content}}</button>

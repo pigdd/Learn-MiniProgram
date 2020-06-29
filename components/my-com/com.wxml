@@ -1,0 +1,4 @@
+<!--components/my-com/com.wxml-->
+<!-- 自定义组件的名称只能是小写字母、下划线、中划线组成 -->
+<view class="title">自定义组件</view>
+<button size="mini" class="btn">按钮</button>

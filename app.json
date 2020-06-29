@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/event/event"
-
-  ]
-
+    "pages/home/home",
+    "pages/tabbar/tabbar",
+    "components/com-train/com-train"
+  ],
+  "sitemapLocation": "sitemap61.json"
 }

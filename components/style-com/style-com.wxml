@@ -1,0 +1,3 @@
+<!--components/style-com/style-com.wxml-->
+<view class="title">组件样式标题</view>
+<view class="content">组件样式内容</view>

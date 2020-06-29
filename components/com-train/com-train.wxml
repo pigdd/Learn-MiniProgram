@@ -1,0 +1,11 @@
+<!--components/com-train/com-train.wxml-->
+<!-- 自定义组件 -->
+<view class="tab">
+  <block wx:for = "{{litters}}" wx:key = "index"> 
+        <view class="item {{indexActive == index ? 'active' : ''}}"   bind:tap = "click" 
+        data-index = "{{index}}"
+        data-item = "{{item}}">
+          <text>{{item}}</text>
+        </view>
+  </block>
+</view>
