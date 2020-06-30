@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<view>detail页面进行跳转</view>
+<!-- 返回到跳转来的页面，只对默认属性有效，其他的都不有效，
+属性delta = “2” 设置返回的层级-->
+<navigator open-type="navigateBack">返回</navigator>
+<view>首页传过来的logo是：{{logo}}</view>
+<button size="mini" bind:tap="handleBackPage">返回首页</button>

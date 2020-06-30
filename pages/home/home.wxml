@@ -1,3 +1,24 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello wechat</text>
-<button size="mini">按钮</button>
+<view>===小程序页面跳转===</view>
+<!-- navigator进行页面跳转 -->
+<navigator url="/pages/detail/detail">跳转到详情页</navigator>
+<!-- 跳转方式：redirect，关闭首页，但是不能跳转到tabbar页面 -->
+<navigator url="/pages/detail/detail"
+           open-type="redirect">
+  跳转到详情页(redirect)
+</navigator>
+<!-- 页面跳转：switchTab跳转tabbar页面 -->
+<navigator url="/pages/about/about"
+           open-type="switchTab">
+  跳转到详情页(switchTab)
+</navigator>
+<!-- 页面跳转：reLaunch属性，关闭所有的页面 -->
+<navigator url="/pages/detail/detail"
+           open-type="reLaunch">
+  跳转到详情页(reLaunch)
+</navigator>
+<view>========数据传递=========</view>
+<navigator url="/pages/detail/detail?logo=bililbili&age = 11">跳转传递数据</navigator>
+<text>{{title}}</text>
+<!-- 通过js中的代码实现页面跳转 -->
+<button size="mini" bind:tap = "handlepushPage">跳转</button>
