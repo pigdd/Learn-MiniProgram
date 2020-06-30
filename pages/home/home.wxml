@@ -1,3 +1,13 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello wechat</text>
-<button size="mini">按钮</button>
+<view>小程序中的弹窗展示</view>
+<!-- 第一种弹窗：Toast -->
+<button size="mini" bind:tap = "handleShowToast">showToast</button>
+<!-- 第二种弹窗：Modal -->
+<button size="mini" bind:tap = "handleShowModal">showModal</button>
+<!-- 第三种弹窗：Loading -->
+<button size="mini" bind:tap = "handleShoeLoad">showLoad</button>
+<!-- 第四种弹窗: ActionSheet -->
+<button size="mini" bind:tap = "handleActionSheet">showActionSheet</button>
+<view>你选中的是{{name}}</view>
+<!-- 分享按钮 -->
+<button size="mini" open-type="share">分享</button> 
